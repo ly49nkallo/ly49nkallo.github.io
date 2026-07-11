@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 """Start a local HTTP server for previewing the site at http://localhost:8000"""
 
 import http.server

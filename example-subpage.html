@@ -1,0 +1,143 @@
+<!doctype html> <!-- Declares that this document uses modern HTML5. -->
+<html lang="en"> <!-- Opens the HTML document and identifies its language as English. -->
+<head> <!-- Starts metadata that configures the page but is not shown as page content. -->
+  <meta charset="utf-8"> <!-- Lets the page safely display Unicode characters. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Makes the layout match the screen width on mobile devices. -->
+  <meta name="description" content="A practical cheatsheet of basic HTML elements."> <!-- Gives search engines a short description of the page. -->
+  <title>HTML Cheatsheet | Ty Brennan</title> <!-- Sets the text shown in the browser tab. -->
+  <link rel="stylesheet" href="style.css"> <!-- Loads the site's shared CSS stylesheet. -->
+</head> <!-- Ends the document metadata. -->
+<body id="top"> <!-- Starts all displayed content and creates the destination for the Back to top link. -->
+  <header> <!-- Defines introductory content for the page. -->
+    <h1>HTML Cheatsheet</h1> <!-- Displays the page's single, most important heading. -->
+    <p>A quick reference containing examples of common HTML features.</p> <!-- Creates a paragraph of text. -->
+    <nav aria-label="Main navigation"> <!-- Defines a group of navigation links and labels it for assistive technology. -->
+      <a href="index.html">Home</a> | <a href="#text">Text</a> | <a href="#lists">Lists</a> | <a href="#table">Table</a> | <a href="#form">Form</a> <!-- Creates links to another page and to sections identified by matching id attributes. -->
+    </nav> <!-- Ends the navigation region. -->
+  </header> <!-- Ends the page header. -->
+  <hr> <!-- Draws a thematic break between sections. -->
+  <main> <!-- Identifies the unique main content of the page. -->
+    <section id="text"> <!-- Groups related text examples and provides a link target named text. -->
+      <h2>Headings and text</h2> <!-- Creates a second-level section heading. -->
+      <h3>Third-level heading</h3> <!-- Creates a heading nested beneath an h2 section. -->
+      <h4>Fourth-level heading</h4> <!-- Creates a heading nested beneath an h3 topic. -->
+      <h5>Fifth-level heading</h5> <!-- Creates a lower-level heading. -->
+      <h6>Sixth-level heading</h6> <!-- Creates the lowest standard heading level. -->
+      <p>This paragraph contains <strong>important text</strong>, <em>emphasized text</em>, <b>bold styling</b>, <i>alternate-voice text</i>, <u>an annotation</u>, <mark>highlighting</mark>, <small>small print</small>, <s>outdated text</s>, H<sub>2</sub>O, and x<sup>2</sup>.</p> <!-- Demonstrates a paragraph plus semantic importance, emphasis, presentational text, highlighting, small print, deletion-like styling, subscript, and superscript. -->
+      <p>Use <code>&lt;h1&gt;</code> for the main heading, press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save, and expect <samp>Saved successfully</samp>.</p> <!-- Demonstrates inline code, keyboard input, and sample program output. -->
+      <p>A variable can be written as <var>x</var>, a date as <time datetime="2026-07-11">July 11, 2026</time>, and an abbreviation as <abbr title="HyperText Markup Language">HTML</abbr>.</p> <!-- Demonstrates variables, machine-readable dates, and expanded abbreviations. -->
+      <p>A forced line break comes here:<br>this text starts on the next line, while a possible word-break can appear in supercalifragilistic<wbr>expialidocious.</p> <!-- Demonstrates a required line break and an optional long-word break point. -->
+      <blockquote cite="https://developer.mozilla.org/"> <!-- Starts a long quotation and records its source URL. -->
+        <p>HTML gives content structure and meaning.</p> <!-- Places a paragraph inside the block quotation. -->
+      </blockquote> <!-- Ends the long quotation. -->
+      <p>Someone once said, <q>Use semantic elements</q>, and cited <cite>MDN Web Docs</cite>.</p> <!-- Demonstrates a short inline quotation and the title of a cited work. -->
+      <pre><code>&lt;p&gt;Preformatted code keeps spaces and line breaks.&lt;/p&gt;</code></pre> <!-- Preserves whitespace while marking the contents as a code sample. -->
+      <p><del datetime="2026-01-01">Old wording</del> <ins datetime="2026-01-02">New wording</ins></p> <!-- Marks removed and newly inserted content, including machine-readable change dates. -->
+      <address>Email the author at <a href="mailto:tyabrennan@berkeley.edu">tyabrennan@berkeley.edu</a>.</address> <!-- Supplies contact information and demonstrates an email link. -->
+    </section> <!-- Ends the text examples section. -->
+    <section id="lists"> <!-- Starts the list examples and creates the lists link target. -->
+      <h2>Lists</h2> <!-- Labels the list section. -->
+      <ul> <!-- Starts an unordered, bulleted list. -->
+        <li>Unordered item</li> <!-- Creates one item inside the unordered list. -->
+        <li>Another item</li> <!-- Creates a second unordered-list item. -->
+      </ul> <!-- Ends the unordered list. -->
+      <ol start="3"> <!-- Starts a numbered list whose numbering begins at three. -->
+        <li>Third item</li> <!-- Creates one numbered-list item. -->
+        <li>Fourth item</li> <!-- Creates the next numbered-list item. -->
+      </ol> <!-- Ends the ordered list. -->
+      <dl> <!-- Starts a description list of terms and explanations. -->
+        <dt>HTML</dt> <!-- Defines a term in the description list. -->
+        <dd>The language that structures a web page.</dd> <!-- Defines the description belonging to the preceding term. -->
+      </dl> <!-- Ends the description list. -->
+    </section> <!-- Ends the list examples section. -->
+    <section> <!-- Starts a section for links and embedded content. -->
+      <h2>Links and media</h2> <!-- Labels the links and media section. -->
+      <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Open the HTML documentation in a new tab</a>.</p> <!-- Creates an external link and prevents the new tab from controlling this page. -->
+      <figure> <!-- Groups media with its caption as one self-contained unit. -->
+        <svg width="160" height="80" viewBox="0 0 160 80" role="img" aria-labelledby="svg-title"> <!-- Draws a scalable vector graphic with an accessible label. -->
+          <title id="svg-title">Blue example rectangle</title> <!-- Gives the SVG an accessible title. -->
+          <rect width="160" height="80" rx="8" fill="steelblue"></rect> <!-- Draws a rounded blue rectangle inside the SVG. -->
+          <text x="80" y="46" text-anchor="middle" fill="white">SVG example</text> <!-- Draws centered white text inside the SVG. -->
+        </svg> <!-- Ends the vector graphic. -->
+        <figcaption>A figure caption describing the SVG above.</figcaption> <!-- Captions the content contained by figure. -->
+      </figure> <!-- Ends the media-and-caption group. -->
+      <audio controls> <!-- Embeds an audio player with browser-provided controls. -->
+        <source src="example-audio.mp3" type="audio/mpeg"> <!-- Offers an MP3 file to the audio player if that file is added later. -->
+        Your browser does not support embedded audio. <!-- Provides fallback text when audio is unsupported. -->
+      </audio> <!-- Ends the audio player. -->
+      <video controls width="320" poster=""> <!-- Embeds a video player with controls and a display width. -->
+        <source src="example-video.mp4" type="video/mp4"> <!-- Offers an MP4 file to the video player if that file is added later. -->
+        <track kind="captions" src="captions.vtt" srclang="en" label="English"> <!-- Associates an English caption file with the video if it is added later. -->
+        Your browser does not support embedded video. <!-- Provides fallback text when video is unsupported. -->
+      </video> <!-- Ends the video player. -->
+    </section> <!-- Ends the links and media section. -->
+    <section id="table"> <!-- Starts the table section and creates its navigation target. -->
+      <h2>Table</h2> <!-- Labels the table section. -->
+      <table> <!-- Starts a table of data arranged in rows and columns. -->
+        <caption>Example course scores</caption> <!-- Provides an accessible title for the table. -->
+        <thead> <!-- Groups the table's header rows. -->
+          <tr> <!-- Starts one table row. -->
+            <th scope="col">Course</th> <!-- Creates a header that describes its column. -->
+            <th scope="col">Score</th> <!-- Creates the second column header. -->
+          </tr> <!-- Ends the header row. -->
+        </thead> <!-- Ends the table header group. -->
+        <tbody> <!-- Groups the table's main data rows. -->
+          <tr> <!-- Starts a data row. -->
+            <th scope="row">Physics</th> <!-- Creates a header that describes this row. -->
+            <td>95%</td> <!-- Creates a standard table data cell. -->
+          </tr> <!-- Ends the data row. -->
+          <tr> <!-- Starts another data row. -->
+            <th scope="row">Mathematics</th> <!-- Labels the second data row. -->
+            <td>92%</td> <!-- Supplies the second row's score. -->
+          </tr> <!-- Ends the second data row. -->
+        </tbody> <!-- Ends the table body group. -->
+        <tfoot> <!-- Groups summary rows at the bottom of the table. -->
+          <tr><th scope="row">Average</th><td>93.5%</td></tr> <!-- Creates a compact footer row with a label and result. -->
+        </tfoot> <!-- Ends the table footer group. -->
+      </table> <!-- Ends the table. -->
+    </section> <!-- Ends the table section. -->
+    <section id="form"> <!-- Starts the form section and creates its navigation target. -->
+      <h2>Form controls</h2> <!-- Labels the form section. -->
+      <form action="#" method="get"> <!-- Starts a form that would submit its values in the page URL. -->
+        <fieldset> <!-- Groups related form controls inside a labeled border. -->
+          <legend>Example form</legend> <!-- Provides a caption for the fieldset. -->
+          <p><label for="name">Name:</label> <input id="name" name="name" type="text" placeholder="Ada Lovelace" required></p> <!-- Labels and creates a required single-line text field. -->
+          <p><label for="email">Email:</label> <input id="email" name="email" type="email" autocomplete="email"></p> <!-- Creates a field that validates email-address syntax and supports autofill. -->
+          <p><label for="password">Password:</label> <input id="password" name="password" type="password" minlength="8"></p> <!-- Creates a concealed text field requiring at least eight characters. -->
+          <p><label for="number">Number:</label> <input id="number" name="number" type="number" min="0" max="100" value="50"></p> <!-- Creates a numeric field restricted to values from zero through one hundred. -->
+          <p><label for="range">Range:</label> <input id="range" name="range" type="range" min="0" max="10"></p> <!-- Creates a slider control. -->
+          <p><label for="date">Date:</label> <input id="date" name="date" type="date"></p> <!-- Creates a browser-native date picker. -->
+          <p><label for="color">Color:</label> <input id="color" name="color" type="color" value="#4682b4"></p> <!-- Creates a browser-native color picker. -->
+          <p><label><input name="updates" type="checkbox" checked> Receive updates</label></p> <!-- Creates a checked checkbox wrapped by its clickable label. -->
+          <p><label><input name="level" type="radio" value="beginner" checked> Beginner</label> <label><input name="level" type="radio" value="advanced"> Advanced</label></p> <!-- Creates two mutually exclusive radio buttons sharing one name. -->
+          <p><label for="topic">Topic:</label> <select id="topic" name="topic"><option value="html">HTML</option><option value="css">CSS</option></select></p> <!-- Creates a labeled drop-down menu containing two selectable options. -->
+          <p><label for="browser">Browser:</label> <input id="browser" name="browser" list="browsers"><datalist id="browsers"><option value="Chrome"><option value="Firefox"><option value="Safari"></datalist></p> <!-- Creates a text field with suggested values supplied by a datalist. -->
+          <p><label for="message">Message:</label><br><textarea id="message" name="message" rows="4" cols="40">Editable text</textarea></p> <!-- Creates a labeled multi-line text-entry area. -->
+          <p><label for="file">File:</label> <input id="file" name="file" type="file"></p> <!-- Creates a local file-selection control. -->
+          <p><button type="submit">Submit</button> <button type="reset">Reset</button> <button type="button">Plain button</button></p> <!-- Creates submit, form-reset, and general-purpose buttons. -->
+        </fieldset> <!-- Ends the related group of form controls. -->
+      </form> <!-- Ends the form. -->
+    </section> <!-- Ends the form section. -->
+    <section> <!-- Starts a section for interactive and semantic elements. -->
+      <h2>Interactive and semantic elements</h2> <!-- Labels the final examples section. -->
+      <details> <!-- Creates a disclosure widget that the visitor can open and close. -->
+        <summary>Click to reveal more</summary> <!-- Supplies the always-visible label for the details widget. -->
+        <p>This content is hidden until the details element is opened.</p> <!-- Provides the collapsible content. -->
+      </details> <!-- Ends the disclosure widget. -->
+      <p><label for="progress">Progress:</label> <progress id="progress" value="70" max="100">70%</progress></p> <!-- Displays completion progress with a text fallback. -->
+      <p><label for="meter">Meter:</label> <meter id="meter" min="0" max="100" low="30" high="80" optimum="90" value="75">75 out of 100</meter></p> <!-- Displays a measurement within a known range and marks low, high, and ideal values. -->
+      <article> <!-- Wraps self-contained content that could stand on its own. -->
+        <h3>Example article</h3> <!-- Gives the article its own heading. -->
+        <p>An article can represent a post, story, or independent entry.</p> <!-- Supplies the article's body content. -->
+      </article> <!-- Ends the self-contained article. -->
+      <aside> <!-- Marks content that is indirectly related to the surrounding content. -->
+        <p>Tip: semantic tags make a page easier to understand and navigate.</p> <!-- Provides the aside's supporting note. -->
+      </aside> <!-- Ends the related aside content. -->
+    </section> <!-- Ends the interactive and semantic examples section. -->
+  </main> <!-- Ends the unique main page content. -->
+  <hr> <!-- Separates the main content from the footer. -->
+  <footer> <!-- Starts the page footer. -->
+    <p><a href="index.html">Return home</a> · <a href="#top">Back to top</a></p> <!-- Provides navigation back home and to the top of the document. -->
+  </footer> <!-- Ends the page footer. -->
+</body> <!-- Ends all visible page content. -->
+</html> <!-- Ends the HTML document. -->
