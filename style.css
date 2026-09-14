@@ -73,3 +73,14 @@ img {
     font-size: 11pt;
   }
 }
+
+.images {
+  display: flex;
+  gap: 16px;
+}
+
+.images img {
+  width: calc(50% - 8px);
+  height: auto;
+  object-fit: cover;
+}
